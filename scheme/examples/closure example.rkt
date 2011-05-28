@@ -14,3 +14,14 @@
 (plus-two 1)
 
 (plus-two 2)
+
+
+(define (make-obj lst)
+  (lambda (getter)
+         (getter lst)))
+
+(define tmp-obj (make-obj '(1 2 3)))
+
+(tmp-obj first)
+
+(tmp-obj second)
