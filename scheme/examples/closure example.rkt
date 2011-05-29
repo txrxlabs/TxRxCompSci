@@ -22,15 +22,22 @@
   (lambda (getter)
          (getter lst)))
 
-(define tmp-obj (make-obj '(1 2 3)))
 (define (obj-set-car x)
   (lambda (lst)
     (set-car! lst x)))
 
-(tmp-obj first)
+(define obj-1 (make-obj '(1 2 3)))
+(define obj-2 (make-obj '(1 2 3)))
+
+(obj-1 first)
+;1
+(obj-2 first)
 ;1
 
-(tmp-obj (obj-set-car 2))
 
-(tmp-obj first)
+(obj-1 (obj-set-car 2))
+
+(obj-1 first)
+;2
+(obj-2 first)
 ;2
