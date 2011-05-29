@@ -40,4 +40,4 @@
 (obj-1 first)
 ;2
 (obj-2 first)
-;2
+;1
