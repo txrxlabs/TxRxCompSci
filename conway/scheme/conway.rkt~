@@ -1,0 +1,23 @@
+(define (sum lst) (foldl + lst))
+
+(define board)
+  
+(define (isAlive x y)
+  (let ((s (sum (neighors board  x y))))
+    (cond
+      ((> s 2) 0)
+      ((>= 3 s 2) 1)
+      ((> s 3) 0))))
+
+(define (board-ref board x y)
+  (vector-ref (vector-ref board y) x)
+  )
+
+(define (neigbors board x y)
+  (list (board-ref board (x+1) y)
+        (board-ref board (x-1) y)
+        (board-ref board x (y+1))
+        (board-ref board x (y-1))))
+
+
+  
