@@ -13,4 +13,6 @@ When run program will currently read in huck.txt and output huck.tree.
 compile line
 ghc -XFlexibleInstances  -threaded -rtsopts   tree.hs
 
-
+fLong found the longest word to be:
+"uncomfortableness"
+At a length of 17
