@@ -1,3 +1,16 @@
 
 The provided code is naive and inefficient.
 When run program will currently read in huck.txt and output huck.tree.
+
+
+./tree +RTS -s -N2
+
+-s to report sparks create?
+
+-N2 Two main threads
+
+
+compile line
+ghc -XFlexibleInstances  -threaded -rtsopts   tree.hs
+
+
